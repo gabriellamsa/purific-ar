@@ -1,5 +1,8 @@
 import React from "react";
 import backgroundImage from "../assets/background-homepage.jpg";
+import installationImage from "../assets/installation-image.jpg";
+import maintenanceImage from "../assets/maintenance-image.jpg";
+import cleaningImage from "../assets/cleaning-image.jpg";
 
 const HomePage = () => {
   return (
@@ -50,12 +53,22 @@ const HomePage = () => {
       <section id="about" className="py-20 px-4 bg-gray-100 text-gray-800">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold mb-6 animate-fade-in">Sobre nós</h2>
+          <p className="text-lg mb-6 animate-slide-up">
+            Na Purific.Ar, nossa missão é garantir que você e sua família
+            respirem um ar mais puro e desfrutem de ambientes confortáveis.
+            Combinamos tecnologia avançada e atendimento personalizado, sempre
+            focados no seu bem-estar e satisfação em cada etapa.
+          </p>
+          <p className="text-lg mb-6 animate-slide-up">
+            Somos credenciados pela TCL, uma marca líder em climatização, e
+            contamos com a parceria da Frigelar, referência em equipamentos de
+            alta qualidade. Oferecemos soluções de confiança para atender às
+            suas necessidades com precisão.
+          </p>
           <p className="text-lg animate-slide-up">
-            A Purific.Ar dedica-se a fornecer as melhores soluções de ar
-            condicionado para garantir ambientes mais saudáveis e confortáveis
-            para os nossos clientes. Com anos de experiência em instalação,
-            manutenção e e assistência técnica, damos prioridade à qualidade e à
-            satisfação do cliente.
+            Ao escolher a Purific.Ar, você escolhe excelência e cuidado. Nossa
+            equipe está comprometida em transformar o seu ambiente, entregando
+            sempre conforto e tranquilidade.
           </p>
         </div>
       </section>
@@ -67,26 +80,54 @@ const HomePage = () => {
             Nossos serviços
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Instalação */}
             <div className="p-6 border rounded shadow-sm animate-slide-up">
-              <h3 className="text-xl font-semibold mb-4">Instalação</h3>
+              <img
+                src={installationImage}
+                alt="Instalação"
+                className="w-full h-48 object-cover mb-4 rounded"
+              />
+              <h3 className="text-xl font-semibold mb-4">
+                Instalação Especializada
+              </h3>
               <p>
-                Serviços de instalação profissionais para garantir que o seu
-                sistema funcione com o máximo desempenho desde o primeiro dia.
+                Instalações precisas e seguras que garantem o funcionamento
+                ideal do seu ar-condicionado desde o primeiro dia. Nossa equipe
+                certificada cuida de cada detalhe para que você tenha conforto
+                imediato e duradouro.
               </p>
             </div>
+            {/* Manutenção */}
             <div className="p-6 border rounded shadow-sm animate-slide-up">
-              <h3 className="text-xl font-semibold mb-4">Manutenção</h3>
+              <img
+                src={maintenanceImage}
+                alt="Manutenção"
+                className="w-full h-48 object-cover mb-4 rounded"
+              />
+              <h3 className="text-xl font-semibold mb-4">
+                Manutenção Preventiva
+              </h3>
               <p>
-                Manutenção regular para manter o seu sistema de ar condicionado
-                a funcionar eficiente e fiável.
+                Manutenções regulares para manter seu sistema funcionando de
+                forma eficiente e confiável, evitando problemas futuros e
+                prolongando a vida útil do equipamento.
               </p>
             </div>
+            {/* Higienização */}
             <div className="p-6 border rounded shadow-sm animate-slide-up">
-              <h3 className="text-xl font-semibold mb-4">Reparos</h3>
+              <img
+                src={cleaningImage}
+                alt="Higienização"
+                className="w-full h-48 object-cover mb-4 rounded"
+              />
+              <h3 className="text-xl font-semibold mb-4">
+                Higienização Completa
+              </h3>
               <p>
-                Serviços de reparação especializados para resolver quaisquer
-                problemas de forma rápida e eficazmente, minimizando o tempo de
-                inatividade.
+                Limpeza e higienização profunda do seu ar-condicionado,
+                removendo impurezas e garantindo um ar mais saudável para você e
+                sua família. Ideal para melhorar a qualidade do ar e evitar
+                problemas respiratórios.
               </p>
             </div>
           </div>
