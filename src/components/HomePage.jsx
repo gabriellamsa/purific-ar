@@ -31,9 +31,7 @@ const HomePage = () => {
       <section
         id="home"
         className="h-screen flex flex-col justify-center items-center text-white bg-cover bg-center"
-        style={{
-          backgroundImage: `url(${backgroundImage})`,
-        }}
+        style={{ backgroundImage: `url(${backgroundImage})` }}
       >
         <h1 className="text-5xl font-bold mb-4 animate-fade-in">
           Bem Vindo ao Purific.Ar
@@ -136,24 +134,71 @@ const HomePage = () => {
 
       {/* section contato */}
       <section id="contact" className="py-20 px-4 bg-gray-100 text-gray-800">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-6 animate-fade-in">
-            Entre em contato
-          </h2>
-          <p className="text-lg mb-12 animate-slide-up">
-            Não hesite em nos contatar para qualquer questão ou para solicitar
-            um orçamento.
-          </p>
-          <a
-            href="https://wa.me/+5541999999999" //corrigir o número e ocultar mais tarde!
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-green-500 text-white font-semibold py-2 px-4 rounded shadow-lg hover:bg-green-600 transition duration-300"
-          >
-            WhatsApp
-          </a>
+        <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center">
+          <div className="md:w-1/2 mb-8 md:mb-0 text-center md:text-left">
+            <h2 className="text-3xl font-bold mb-6">
+              Peça já o seu orçamento gratuito!
+            </h2>
+            <p className="text-lg mb-6">
+              Estamos aqui para ajudar com qualquer dúvida ou necessidade. Entre
+              em contato conosco e descubra como podemos oferecer as melhores
+              soluções para você.
+            </p>
+          </div>
+          <div className="md:w-1/2">
+            <form
+              action="https://formspree.io/f/YOUR_FORM_ID" //substituir com o URL para envio de formulários -- aqui é um teste
+              method="POST"
+              className="bg-white p-8 rounded shadow-md"
+            >
+              <h3 className="text-2xl font-semibold mb-4">Entre em contato</h3>
+              <label className="block mb-4">
+                <span className="text-gray-700">Nome</span>
+                <input
+                  type="text"
+                  name="name"
+                  required
+                  className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+                />
+              </label>
+              <label className="block mb-4">
+                <span className="text-gray-700">Email</span>
+                <input
+                  type="email"
+                  name="email"
+                  required
+                  className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+                />
+              </label>
+              <label className="block mb-4">
+                <span className="text-gray-700">Mensagem</span>
+                <textarea
+                  name="message"
+                  required
+                  rows="4"
+                  className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+                />
+              </label>
+              <button
+                type="submit"
+                className="bg-green-500 text-white font-semibold py-2 px-4 rounded shadow-lg hover:bg-green-600 transition duration-300"
+              >
+                Enviar
+              </button>
+            </form>
+          </div>
         </div>
       </section>
+
+      {/* botão whatsapp */}
+      <a
+        href="https://wa.me/+5541999999999" //corrigir o número e ocultar mais tarde!
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed bottom-8 right-8 bg-green-500 text-white font-semibold py-2 px-4 rounded-full shadow-lg hover:bg-green-600 transition duration-300 animate-float"
+      >
+        WhatsApp
+      </a>
     </div>
   );
 };
