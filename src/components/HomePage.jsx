@@ -199,6 +199,40 @@ const HomePage = () => {
       >
         WhatsApp
       </a>
+      {/* footer */}
+      <footer className="bg-gray-800 text-white py-6">
+        <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center">
+          <div className="text-center md:text-left mb-4 md:mb-0">
+            <h3 className="text-xl font-bold mb-2">Purific.Ar</h3>
+            <p className="text-gray-400">
+              © 2024 Purific.Ar. Todos os direitos reservados.
+            </p>
+          </div>
+          <div className="flex space-x-6 mb-4 md:mb-0">
+            <a
+              href="https://www.facebook.com/profile.php?id=100063702363852&locale=pt_BR"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-gray-400"
+            >
+              Facebook
+            </a>
+            <a
+              href="https://www.instagram.com/purific.ar_ar_condicionado/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-gray-400"
+            >
+              Instagram
+            </a>
+          </div>
+          <div className="text-center md:text-right">
+            <a href="#home" className="text-gray-400 hover:text-gray-300">
+              Voltar ao topo
+            </a>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 };
