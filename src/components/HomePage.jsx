@@ -3,7 +3,7 @@ import backgroundImage from "../assets/background-homepage.jpg";
 
 const HomePage = () => {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen scroll-smooth">
       <header className="fixed top-0 left-0 w-full bg-indigo-900 text-white shadow z-50">
         <nav className="max-w-7xl mx-auto p-4 flex justify-between items-center">
           <div className="font-bold text-xl">Purific.Ar</div>
@@ -32,8 +32,10 @@ const HomePage = () => {
           backgroundImage: `url(${backgroundImage})`,
         }}
       >
-        <h1 className="text-5xl font-bold mb-4">Bem Vindo ao Purific.Ar</h1>
-        <p className="text-lg mb-8">
+        <h1 className="text-5xl font-bold mb-4 animate-fade-in">
+          Bem Vindo ao Purific.Ar
+        </h1>
+        <p className="text-lg mb-8 animate-slide-up">
           Soluções para ambientes mais saudáveis e mais confortáveis!
         </p>
         <a
@@ -47,8 +49,8 @@ const HomePage = () => {
       {/* section sobre */}
       <section id="about" className="py-20 px-4 bg-gray-100 text-gray-800">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-6">Sobre nós</h2>
-          <p className="text-lg">
+          <h2 className="text-3xl font-bold mb-6 animate-fade-in">Sobre nós</h2>
+          <p className="text-lg animate-slide-up">
             A Purific.Ar dedica-se a fornecer as melhores soluções de ar
             condicionado para garantir ambientes mais saudáveis e confortáveis
             para os nossos clientes. Com anos de experiência em instalação,
@@ -61,23 +63,25 @@ const HomePage = () => {
       {/* section serviços */}
       <section id="services" className="py-20 px-4 bg-white text-gray-800">
         <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-12">Nossos serviços</h2>
+          <h2 className="text-3xl font-bold mb-12 animate-fade-in">
+            Nossos serviços
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="p-6 border rounded shadow-sm">
+            <div className="p-6 border rounded shadow-sm animate-slide-up">
               <h3 className="text-xl font-semibold mb-4">Instalação</h3>
               <p>
                 Serviços de instalação profissionais para garantir que o seu
                 sistema funcione com o máximo desempenho desde o primeiro dia.
               </p>
             </div>
-            <div className="p-6 border rounded shadow-sm">
+            <div className="p-6 border rounded shadow-sm animate-slide-up">
               <h3 className="text-xl font-semibold mb-4">Manutenção</h3>
               <p>
                 Manutenção regular para manter o seu sistema de ar condicionado
                 a funcionar eficiente e fiável.
               </p>
             </div>
-            <div className="p-6 border rounded shadow-sm">
+            <div className="p-6 border rounded shadow-sm animate-slide-up">
               <h3 className="text-xl font-semibold mb-4">Reparos</h3>
               <p>
                 Serviços de reparação especializados para resolver quaisquer
@@ -92,8 +96,10 @@ const HomePage = () => {
       {/* section contato */}
       <section id="contact" className="py-20 px-4 bg-gray-100 text-gray-800">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-6">Entre em contato</h2>
-          <p className="text-lg mb-12">
+          <h2 className="text-3xl font-bold mb-6 animate-fade-in">
+            Entre em contato
+          </h2>
+          <p className="text-lg mb-12 animate-slide-up">
             Não hesite em nos contatar para qualquer questão ou para solicitar
             um orçamento.
           </p>
