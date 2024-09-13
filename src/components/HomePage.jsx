@@ -1,4 +1,5 @@
 import React from "react";
+import backgroundImage from "../assets/background-homepage.jpg";
 
 const HomePage = () => {
   return (
@@ -26,7 +27,10 @@ const HomePage = () => {
       {/* section inicio */}
       <section
         id="home"
-        className="h-screen flex flex-col justify-center items-center bg-gradient-to-r from-blue-500 to-blue-700 text-white"
+        className="h-screen flex flex-col justify-center items-center text-white bg-cover bg-center"
+        style={{
+          backgroundImage: `url(${backgroundImage})`,
+        }}
       >
         <h1 className="text-5xl font-bold mb-4">Bem Vindo ao Purific.Ar</h1>
         <p className="text-lg mb-8">
