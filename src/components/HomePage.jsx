@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import backgroundImage from "../assets/background-homepage.jpg";
+import backgroundImage from "../assets/background-homepage.png";
 import installationImage from "../assets/installation-image.jpg";
 import maintenanceImage from "../assets/maintenance-image.jpg";
 import cleaningImage from "../assets/cleaning-image.jpg";
+import logoImage from "../assets/logo-image.png";
 import emailjs from "emailjs-com";
 
 const HomePage = () => {
@@ -65,12 +66,7 @@ const HomePage = () => {
         className="h-screen flex flex-col justify-center items-center text-white bg-cover bg-center"
         style={{ backgroundImage: `url(${backgroundImage})` }}
       >
-        <h1 className="text-5xl font-bold mb-4 animate-fadeIn">
-          Bem Vindo ao Purific.Ar
-        </h1>
-        <p className="text-lg mb-8 animate-slideUp">
-          Soluções para ambientes mais saudáveis e mais confortáveis!
-        </p>
+        <img src={logoImage} alt="Logo Purific.Ar" className="w-45 h-45 mb-2" />
         <a
           href="#contact"
           className="bg-white text-blue-700 font-semibold py-2 px-4 rounded shadow-lg hover:bg-gray-100 transition duration-300"
@@ -212,13 +208,13 @@ const HomePage = () => {
                   value={formData.message}
                   onChange={handleInputChange}
                   required
-                  rows="4"
                   className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
-                />
+                  rows="4"
+                ></textarea>
               </label>
               <button
                 type="submit"
-                className="bg-green-500 text-white font-semibold py-2 px-4 rounded shadow-lg hover:bg-green-600 transition duration-300"
+                className="bg-indigo-600 text-white font-semibold py-2 px-4 rounded shadow-lg hover:bg-indigo-700 transition duration-300"
               >
                 Enviar
               </button>
