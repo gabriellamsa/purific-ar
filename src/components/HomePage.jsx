@@ -1,12 +1,44 @@
-import React from "react";
+import React, { useState } from "react";
 import backgroundImage from "../assets/background-homepage.jpg";
 import installationImage from "../assets/installation-image.jpg";
 import maintenanceImage from "../assets/maintenance-image.jpg";
 import cleaningImage from "../assets/cleaning-image.jpg";
+import emailjs from "emailjs-com";
 
 const HomePage = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .send(
+        "service_4nxryz3", // service ID
+        "template_uh5l6s2", // template ID
+        formData,
+        "TqXq7AYSBxGNfLYap" // Key ID
+      )
+      .then(
+        (result) => {
+          alert("Mensagem enviada com sucesso!");
+        },
+        (error) => {
+          alert("Falha ao enviar mensagem. Tente novamente.");
+        }
+      );
+  };
+
   return (
-    <div className="min-h-screen scroll-smooth">
+    <div className="min-h-screen">
       <header className="fixed top-0 left-0 w-full bg-indigo-900 text-white shadow z-50">
         <nav className="max-w-7xl mx-auto p-4 flex justify-between items-center">
           <div className="font-bold text-xl">Purific.Ar</div>
@@ -33,10 +65,10 @@ const HomePage = () => {
         className="h-screen flex flex-col justify-center items-center text-white bg-cover bg-center"
         style={{ backgroundImage: `url(${backgroundImage})` }}
       >
-        <h1 className="text-5xl font-bold mb-4 animate-fade-in">
+        <h1 className="text-5xl font-bold mb-4 animate-fadeIn">
           Bem Vindo ao Purific.Ar
         </h1>
-        <p className="text-lg mb-8 animate-slide-up">
+        <p className="text-lg mb-8 animate-slideUp">
           Soluções para ambientes mais saudáveis e mais confortáveis!
         </p>
         <a
@@ -50,20 +82,20 @@ const HomePage = () => {
       {/* section sobre */}
       <section id="about" className="py-20 px-4 bg-gray-100 text-gray-800">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-6 animate-fade-in">Sobre nós</h2>
-          <p className="text-lg mb-6 animate-slide-up">
+          <h2 className="text-3xl font-bold mb-6 animate-fadeIn">Sobre nós</h2>
+          <p className="text-lg mb-6 animate-slideUp">
             Na Purific.Ar, nossa missão é garantir que você e sua família
             respirem um ar mais puro e desfrutem de ambientes confortáveis.
             Combinamos tecnologia avançada e atendimento personalizado, sempre
             focados no seu bem-estar e satisfação em cada etapa.
           </p>
-          <p className="text-lg mb-6 animate-slide-up">
+          <p className="text-lg mb-6 animate-slideUp">
             Somos credenciados pela TCL, uma marca líder em climatização, e
             contamos com a parceria da Frigelar, referência em equipamentos de
             alta qualidade. Oferecemos soluções de confiança para atender às
             suas necessidades com precisão.
           </p>
-          <p className="text-lg animate-slide-up">
+          <p className="text-lg animate-slideUp">
             Ao escolher a Purific.Ar, você escolhe excelência e cuidado. Nossa
             equipe está comprometida em transformar o seu ambiente, entregando
             sempre conforto e tranquilidade.
@@ -74,12 +106,12 @@ const HomePage = () => {
       {/* section serviços */}
       <section id="services" className="py-20 px-4 bg-white text-gray-800">
         <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-12 animate-fade-in">
+          <h2 className="text-3xl font-bold mb-12 animate-fadeIn">
             Nossos serviços
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Instalação */}
-            <div className="p-6 border rounded shadow-sm animate-slide-up">
+            <div className="p-6 border rounded shadow-sm animate-slideUp">
               <img
                 src={installationImage}
                 alt="Instalação"
@@ -96,7 +128,7 @@ const HomePage = () => {
               </p>
             </div>
             {/* Manutenção */}
-            <div className="p-6 border rounded shadow-sm animate-slide-up">
+            <div className="p-6 border rounded shadow-sm animate-slideUp">
               <img
                 src={maintenanceImage}
                 alt="Manutenção"
@@ -112,7 +144,7 @@ const HomePage = () => {
               </p>
             </div>
             {/* Higienização */}
-            <div className="p-6 border rounded shadow-sm animate-slide-up">
+            <div className="p-6 border rounded shadow-sm animate-slideUp">
               <img
                 src={cleaningImage}
                 alt="Higienização"
@@ -147,8 +179,7 @@ const HomePage = () => {
           </div>
           <div className="md:w-1/2">
             <form
-              action="https://formspree.io/f/YOUR_FORM_ID" //substituir com o URL para envio de formulários -- aqui é um teste
-              method="POST"
+              onSubmit={sendEmail}
               className="bg-white p-8 rounded shadow-md"
             >
               <h3 className="text-2xl font-semibold mb-4">Entre em contato</h3>
@@ -157,6 +188,8 @@ const HomePage = () => {
                 <input
                   type="text"
                   name="name"
+                  value={formData.name}
+                  onChange={handleInputChange}
                   required
                   className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
                 />
@@ -166,6 +199,8 @@ const HomePage = () => {
                 <input
                   type="email"
                   name="email"
+                  value={formData.email}
+                  onChange={handleInputChange}
                   required
                   className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
                 />
@@ -174,6 +209,8 @@ const HomePage = () => {
                 <span className="text-gray-700">Mensagem</span>
                 <textarea
                   name="message"
+                  value={formData.message}
+                  onChange={handleInputChange}
                   required
                   rows="4"
                   className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
@@ -199,6 +236,7 @@ const HomePage = () => {
       >
         WhatsApp
       </a>
+
       {/* footer */}
       <footer className="bg-gray-800 text-white py-6">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center">
@@ -224,6 +262,14 @@ const HomePage = () => {
               className="hover:text-gray-400"
             >
               Instagram
+            </a>
+            <a
+              href="https://www.google.com/maps/place/PURIFIC.AR+AR+CONDICIONADO/@-25.4301275,-49.3459507,5990m/data=!3m1!1e3!4m6!3m5!1s0x94dce1b3edd1b62f:0xb28effe789ad0365!8m2!3d-25.4225431!4d-49.321048!16s%2Fg%2F11k6tyd3tn?entry=ttu&g_ep=EgoyMDI0MDkxNS4wIKXMDSoASAFQAw%3D%3D"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-gray-400"
+            >
+              Mapa
             </a>
           </div>
           <div className="text-center md:text-right">
