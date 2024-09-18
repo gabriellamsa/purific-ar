@@ -6,6 +6,9 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['Poppins', 'sans-serif'],
+      },
       scrollBehavior: ['smooth'],
       animation: {
         float: 'float 3s ease-in-out infinite',
