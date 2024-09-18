@@ -31,6 +31,11 @@ const HomePage = () => {
       .then(
         (result) => {
           alert("Mensagem enviada com sucesso!");
+          setFormData({
+            name: "",
+            email: "",
+            message: "",
+          });
         },
         (error) => {
           alert("Falha ao enviar mensagem. Tente novamente.");
