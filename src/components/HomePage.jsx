@@ -45,7 +45,7 @@ const HomePage = () => {
 
   return (
     <div className="min-h-screen">
-      <header className="fixed top-0 left-0 w-full bg-indigo-900 text-white shadow z-50">
+      <header className="fixed top-0 left-0 w-full bg-sky-500 text-white shadow z-50">
         <nav className="max-w-7xl mx-auto p-4 flex justify-between items-center">
           <div className="font-bold text-xl">Purific.Ar</div>
           <div className="flex space-x-6">
@@ -74,7 +74,7 @@ const HomePage = () => {
         <img src={logoImage} alt="Logo Purific.Ar" className="w-45 h-45 mb-2" />
         <a
           href="#contact"
-          className="bg-white text-blue-700 font-semibold py-2 px-4 rounded shadow-lg hover:bg-gray-100 transition duration-300"
+          className="bg-white text-sky-700 font-semibold py-2 px-4 rounded shadow-lg hover:bg-gray-100 transition duration-300"
         >
           Solicitar Orçamento
         </a>
@@ -219,7 +219,7 @@ const HomePage = () => {
               </label>
               <button
                 type="submit"
-                className="bg-indigo-600 text-white font-semibold py-2 px-4 rounded shadow-lg hover:bg-indigo-700 transition duration-300"
+                className="bg-sky-700 text-white font-semibold py-2 px-4 rounded shadow-lg hover:bg-indigo-700 transition duration-300"
               >
                 Enviar
               </button>
@@ -230,7 +230,7 @@ const HomePage = () => {
 
       {/* botão whatsapp */}
       <a
-        href="https://wa.me/+5541999999999" //corrigir o número e ocultar mais tarde!
+        href="https://wa.me/+5541999486269" //corrigir o número e ocultar mais tarde!
         target="_blank"
         rel="noopener noreferrer"
         className="fixed bottom-8 right-8 bg-green-500 text-white font-semibold py-2 px-4 rounded-full shadow-lg hover:bg-green-600 transition duration-300 animate-float"
@@ -239,7 +239,7 @@ const HomePage = () => {
       </a>
 
       {/* footer */}
-      <footer className="bg-gray-800 text-white py-6">
+      <footer className="bg-sky-800 text-white py-6">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center">
           <div className="text-center md:text-left mb-4 md:mb-0">
             <h3 className="text-xl font-bold mb-2">Purific.Ar</h3>
@@ -274,7 +274,7 @@ const HomePage = () => {
             </a>
           </div>
           <div className="text-center md:text-right">
-            <a href="#home" className="text-gray-400 hover:text-gray-300">
+            <a href="#home" className="text-gray-400 hover:text-gray-400">
               Voltar ao topo
             </a>
           </div>

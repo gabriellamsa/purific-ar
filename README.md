@@ -1,6 +1,8 @@
 # PURIFIC.AR AIR CONDITIONING
 
-Welcome to the **PURIFIC.AR AIR CONDITIONING** repository! This project is a website developed for **PURIFIC.AR**, a company specializing in the installation and maintenance of air conditioning systems. The goal is to create a modern and responsive experience to showcase the company's services and expertise.
+Welcome to the **PURIFIC.AR AIR CONDITIONING** repository! This project features a website developed for **PURIFIC.AR**, a company specializing in the installation and maintenance of air conditioning systems. Our goal is to provide a modern, responsive experience that showcases the company’s services and expertise.
+
+You can view the live site at [https://purificar-condicionado.com.br](https://purificar-condicionado.com.br).
 
 ## Technologies Used
 
